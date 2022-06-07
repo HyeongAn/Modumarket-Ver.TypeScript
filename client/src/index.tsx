@@ -9,10 +9,18 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react';
 import ScrollTop from './components/ScrollTop';
+import { Authentification } from './reducers/loginSlice';
+import { UserInfo } from './reducers/userInfoSlice';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+export interface RootState {
+  login : Authentification;
+  userInfo : UserInfo;
+}
+
 export let persistor = persistStore(store);
 root.render(
   <BrowserRouter>
