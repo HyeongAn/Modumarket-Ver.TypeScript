@@ -49,12 +49,13 @@ export const ProfileContainer = styled.div`
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-
+    
+    
     @media (min-width: 767px){
-       width: 629px;
+        width : 629px
     }
     @media (min-width:1024px){
-        width : 100%;
+        width : 80%;
     }
 `
 
@@ -62,7 +63,7 @@ export const ProfilePhoto = styled.div`
     display: flex;
     align-items: center;
     justify-content : center;
-    padding-top :1rem;
+    padding :1rem 1rem 0 1rem;
     min-width: 13.125rem;
 `
 
