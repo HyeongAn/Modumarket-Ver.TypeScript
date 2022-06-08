@@ -33,6 +33,12 @@ export const NavContainer = styled.div`
     font-family: 'Open Sans', sans-serif;
     font-weight: 900;
     font-size: 2rem;
+    @media (max-width: 1024px){
+        
+    }
+    @media (max-width:60rem){
+        
+    }
     
 `;
 export const NavBoard = styled.div`

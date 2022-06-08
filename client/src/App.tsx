@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset'
 import './App.css';
@@ -59,7 +60,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Header />
+      <Footer/>
     </>
 
   );
