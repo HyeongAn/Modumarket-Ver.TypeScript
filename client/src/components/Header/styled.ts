@@ -128,6 +128,7 @@ export const NavButton = styled.button`
         height: 2rem;
         width: 3.5rem;
         font-size: 0.75rem;
+        margin-right: 0.5rem;
     }
     
     @media (min-width:767px){
