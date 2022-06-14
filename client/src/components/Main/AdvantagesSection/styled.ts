@@ -157,16 +157,19 @@ export const ContentText = styled.div`
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
     font-family: 'Open Sans', sans-serif;
     @media (min-width : 480px){
+        padding : 1rem 0;
         font-size: 0.8rem;
         line-height: 1rem;
     }
     
     @media (min-width:767px){
+        padding : 1rem 0;
         font-size: 1rem;
         line-height: 1.2rem;
     
     }
     @media (min-width: 1024px){
+        padding : 1rem 0;
         font-size: 1.1rem;
         line-height: 1.4rem;
     }
@@ -175,15 +178,18 @@ export const ContentText = styled.div`
         line-height: 1rem;
         font-size:0.75rem;
         font-weight : 700;
-        padding-bottom: 0.5rem;
+        padding-bottom: 0.3rem;
         @media (min-width : 480px){
+            padding-bottom: 0.3rem;
             font-size: 0.9rem;
         }
         
         @media (min-width:767px){
+            padding-bottom: 0.7rem;
             font-size: 1.1rem;
         }
         @media (min-width: 1024px){
+            padding-bottom: 1rem;
             font-size : 1.2rem;
         }
     }

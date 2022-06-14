@@ -17,10 +17,10 @@ function AboutSection() {
             <Section background="#f4f4f4">
                 <Wrap>
                     <IntroduceSection direction="right">
-                        <IntroducePhoto>
+                        <IntroducePhoto direction="right">
                             <img src={CoinMan} alt="introduce" />
                         </IntroducePhoto>
-                        <IntroduceContent>
+                        <IntroduceContent direction="right">
                             <h3>알뜰살뜰 소비를 위한 당신!</h3>
                             <p>
                                 "한개만 사는 것보다 여러개를 한거번에 사는게 더 싸잖아?" <br />
@@ -35,7 +35,7 @@ function AboutSection() {
             <Section background="white">
                 <Wrap>
                     <IntroduceSection direction="left">
-                        <IntroduceContent>
+                        <IntroduceContent direction="left">
                             <h3>이웃들과 함께하는 모두의 마켓은</h3>
                             <p>
                                 가까이 사는 이웃들과 공구하고 싶은 물품을 찾을 수 있어요. <br />
@@ -45,7 +45,7 @@ function AboutSection() {
                                 거래 후 좋았던 점을 후기로 남겨 이웃들과 공유할 수 있어요.
                             </p>
                         </IntroduceContent>
-                        <IntroducePhoto>
+                        <IntroducePhoto direction="left">
                             <img src={ChickenRun} alt="introduce" />
                         </IntroducePhoto>
                     </IntroduceSection>
@@ -54,10 +54,10 @@ function AboutSection() {
             <Section background="#f4f4f4">
                 <Wrap>
                     <IntroduceSection direction="right">
-                        <IntroducePhoto>
+                        <IntroducePhoto direction="right">
                             <img src={Exchange} alt="introduce" />
                         </IntroducePhoto>
-                        <IntroduceContent>
+                        <IntroduceContent direction="right">
                             <h2>
                                 지금 모두의 마켓으로 <br />
                                 이웃들과 공동구매를 시작해보세요!
