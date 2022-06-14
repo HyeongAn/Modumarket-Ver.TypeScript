@@ -100,7 +100,7 @@ export const CategoryLi = styled.li`
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
-    padding-right : 2rem;
+    padding-right : 1rem;
     @media (min-width : 480px){
         padding-right:1rem;
     }

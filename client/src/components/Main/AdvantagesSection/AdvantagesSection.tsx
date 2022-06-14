@@ -27,7 +27,7 @@ function Advantages (){
                                 <h3>온라인으로 쉽게 주문</h3>
                                 <p>
                                     참여하기 버튼 한번으로 <br/>
-                                    원하는 공구에 참여할 수 있어요.
+                                    원하는 공구에 참여해요.
                                 </p>
                             </ContentText>
                         </ContentWrap>
@@ -54,7 +54,7 @@ function Advantages (){
                             <ContentText>
                                 <h3>경제적인 장보기</h3>
                                 <p>
-                                    이웃들과 함께하는 대량구매로 <br/>
+                                    이웃과 함께하는 대량구매로 <br/>
                                     경제적인 장보기가 가능해요.
                                 </p>
                             </ContentText>
