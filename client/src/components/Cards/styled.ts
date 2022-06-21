@@ -19,7 +19,7 @@ export const CardWrap = styled.div`
     display: flex;
     width : 24rem;
     height : 30rem;
-    padding: 0 2rem 3rem 2rem;
+    
 `
 
 export const Card = styled.div`

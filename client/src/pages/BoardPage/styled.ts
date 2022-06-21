@@ -3,21 +3,30 @@ import Arrow from "../../assets/arrow.png"
 
 export const Section = styled.section`
     width : 100vw;
-    padding: 8rem 0 0 0;
+    padding: 4rem 0 0 0;
+
+    @media (min-width: 1024px){
+        padding: 8rem 0 0 0;
+    }
 `
 
 export const Wrap = styled.div`
-     width : 100vw;
+    width : 100vw;
 `
 
 export const TitleWrap = styled.div`
     display : flex;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 800;
     justify-content:center;
-    padding-bottom: 8rem;
+    padding-bottom: 4rem;
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
     font-family: 'Open Sans', sans-serif;
+
+    @media (min-width: 1024px){
+        font-size: 2.5rem;
+        padding-bottom: 8rem;
+    }
 `
 
 export const SearchWrap = styled.div`
@@ -26,14 +35,29 @@ export const SearchWrap = styled.div`
 
 `
 export const SearchTab = styled.input`
-    width : 26rem;
-    height : 2rem;
+    width : 13rem;
+    height : 1.5rem;
     margin : 0 0.5rem;
     font-size: 1rem;
     border: 1.5px solid #DFDFDF;
     border-radius: 4px;
     padding : 0.2rem 0 0 1rem;
-    
+    @media (min-width : 480px){
+       width : 18rem;
+       height : 1.7rem;
+    }
+    @media (min-width : 767px){
+        width : 26rem;
+        height : 1.8rem;
+    }
+
+    @media (min-width: 1024px){
+        width : 26rem;
+        height : 2rem;
+        margin : 0 0.5rem;
+        font-size: 1rem;
+        padding : 0.2rem 0 0 1rem;
+    }
 `
 
 export const SearchButton = styled.button`
@@ -41,23 +65,40 @@ export const SearchButton = styled.button`
     justify-content:center;
     align-items : center;
     font-weight: 700;
-    width : 6rem;
-    height : 2.4rem;
+    width : 3rem;
+    height : 1.9rem;
     margin : 0 0.5rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
     cursor: pointer;
     background-color:#DFDFDF;
     border-radius: 4px;
     border : none;
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
     font-family: 'Open Sans', sans-serif;
+    @media (min-width : 480px){
+       width : 4rem;
+       height : 2.2rem;
+       font-size: 1rem;
+    }
+    @media (min-width : 767px){
+        width : 6rem;
+        height : 2.2rem;
+        font-size: 1rem;
+    }
+
+    @media (min-width: 1024px){
+        width : 6rem;
+        height : 2.4rem;
+        margin : 0 0.5rem;
+        font-size: 1rem;
+    }
 `
 
 export const SearchCategory = styled.select`
 
-    width : 7rem;
-    height :2.4rem;
-    font-size: 1rem;
+    width : 4rem;
+    height :1.9rem;
+    font-size: 0.8rem;
     font-weight: 500;
     border: 1.5px solid #DFDFDF;
     border-radius: 4px;
@@ -68,7 +109,26 @@ export const SearchCategory = styled.select`
     -moz-appearance: none;
     appearance: none;
     background: url(${Arrow}) no-repeat 90% 50%;
-    background-size: auto 20%;
+    background-size: auto 15%;
+    @media (min-width : 480px){
+       width : 6rem;
+       height : 2.2rem;
+       font-size: 1rem;
+       background-size: auto 20%;
+    }
+    @media (min-width : 767px){
+        width : 7rem;
+        height : 2.2rem;
+        font-size: 1rem;
+        background-size: auto 20%;
+    }
+
+    @media (min-width: 1024px){
+        width : 7rem;
+        height :2.4rem;
+        font-size: 1rem;
+        background-size: auto 20%;
+    }
 
     & > option {
         
@@ -81,24 +141,47 @@ export const SearchCategory = styled.select`
 
 export const ReservationButtonWrap = styled.div`
     display: flex;
-    width: 100vm;
-    padding : 4rem;
+    padding : 1rem 1.8rem 1rem 0;
     flex-direction: row-reverse;
-    
+    @media (min-width : 480px){
+        padding : 2rem 2rem 2rem 0;
+    }
+    @media (min-width : 767px){
+        padding : 3rem 2rem 3rem 0;
+    }
+
+    @media (min-width: 1024px){
+        padding : 4rem; 
+    }
 `
 
 export const ReservationButton = styled.button`
-    width : 7.9rem;
-    height : 2.2rem;
+    width : 5.2rem;
+    height : 1.8rem;
     border : 1.5px solid #DFDFDF;
     border-radius: 4px;
     background-color: #FFFF;
-    font-size : 0.9rem;
+    font-size : 0.7rem;
     font-weight: 400;
     cursor: pointer;
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
     font-family: 'Open Sans', sans-serif;
+    @media (min-width : 480px){
+        width : 6rem;
+        height : 1.9rem;
+        font-size : 0.8rem;
+    }
+    @media (min-width : 767px){
+        width : 6.8rem;
+        height : 2rem;
+        font-size : 0.8rem;
+    }
 
+    @media (min-width: 1024px){
+        width : 7.9rem;
+        height : 2.2rem;
+        font-size : 0.9rem;
+    }
 `
 
 
@@ -129,7 +212,7 @@ export const RegisterNotYetPhoto = styled.div`
     justify-content:center;
 `
 const floatingAnimation = keyframes`
- 0% {
+    0% {
         transform: translateY(0);    
     }
     50% {
