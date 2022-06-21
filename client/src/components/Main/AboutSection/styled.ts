@@ -83,16 +83,7 @@ export const IntroduceSection = styled.div<AboutSectionProps>`
 export const IntroducePhoto = styled.div<AboutSectionProps>`
     padding: ${(props) => 
         props.direction === "right" ? "0 0 0 1rem" : "0 1rem 0 0" };
-    @media (min-width : 480px){
-       
-    }
-    @media (min-width : 767px){
     
-    }
-
-    @media (min-width: 1024px){
-        
-    }
     img{
         width : 9.2rem;
         height :9.2rem;
