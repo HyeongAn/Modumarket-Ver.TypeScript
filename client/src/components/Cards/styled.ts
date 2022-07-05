@@ -17,19 +17,37 @@ export const ButtonLink = styled(Link)`
 
 export const CardWrap = styled.div`
     display: flex;
-    width : 24rem;
-    height : 30rem;
-    
+    width : 20rem;
+    height : 26rem;
+    margin: 1rem 0 1rem 0;
+    @media (min-width : 480px){
+        width : 22rem;
+        height : 26rem;
+        margin: 1rem 0 1.5rem 0;
+    }
+
+    @media (min-width: 1024px){
+        width : 24rem;
+        height : 30rem;
+    }
 `
 
 export const Card = styled.div`
-    margin: 0;
+    
     cursor: pointer;
     border : none;
-    width : 24rem;
-    height : 30rem;
+    width : 20rem;
+    height : 26rem;
     border-radius: 12px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    @media (min-width : 480px){
+        width : 22rem;
+        height : 26rem;
+    }
+    @media (min-width: 1024px){
+        width : 24rem;
+        height : 30rem;
+    }
 `
 
 export const CardPhoto = styled.div<ImageProps>`
@@ -40,11 +58,17 @@ export const CardPhoto = styled.div<ImageProps>`
     overflow: hidden;
     & > img{
         width : ${(props) =>
-        (props.image === "" ? '13rem' : '24rem')
-    };
-        height : 11.3rem;
+            (props.image === "" ? '13rem' : '24rem')
+        };
+        height : 9rem;
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
+        @media (min-width : 480px){
+            height : 10rem;
+        }
+        @media (min-width: 1024px){
+            height : 11.3rem;
+        }
     }
 `
 
@@ -58,8 +82,13 @@ export const CardCategoryWrap = styled.div`
 export const CardCategoryPhoto = styled.div`
     padding-left: 1.5rem;
     & > img{
-        width : 2.3rem;
-        height : 2.3rem;
+        width : 2rem;
+        height : 2rem;
+
+        @media (min-width: 1024px){
+            width : 2.3rem;
+            height : 2.3rem;
+        }
     }
 `
 
@@ -68,6 +97,11 @@ export const CardCategory = styled.div`
     font-weight: 700;
     font-size: 1rem;
     padding: 0 0.7rem;
+
+    @media (min-width: 1024px){
+        font-weight: 700;
+        font-size: 1rem;
+    }
 `
 
 
@@ -76,8 +110,17 @@ export const CardTitle = styled.div`
     overflow: hidden;
     & > h3 {
         height: 1.875rem;
-        font-size : 1.5rem;
+        font-size : 1.2rem;
+        overflow: hidden;
         margin : 0;
+        @media (min-width : 480px){
+            font-size : 1.3rem;
+        }
+
+        @media (min-width: 1024px){
+            height: 1.875rem;
+            font-size : 1.5rem;
+        }
     }
 `
 
@@ -86,11 +129,22 @@ export const CardContent = styled.div`
     padding: 0.7rem 1.5rem 0.2rem 1.5rem;
     overflow: hidden;
     & > p{
-        width: 21rem;
+        width: 16rem;
         height: 4.625rem;
-        margin : 0;
+        margin :0;
         font-size: 0.9rem;
-        
+        line-height: 1.1rem;
+        @media (min-width : 480px){
+            width: 19rem;
+            margin :0;
+            height: 4.5rem;
+            font-size: 0.9rem;
+            line-height: 1.2rem;
+        }
+        @media (min-width: 1024px){
+            width: 21rem;
+            height: 4.625rem;
+        }
     }
 `
 
@@ -103,6 +157,7 @@ export const CardLocation = styled.div`
     img{
         width : 1.8rem;
         height : 1.8rem;
+      
     }
 
 & > p {
@@ -112,6 +167,7 @@ export const CardLocation = styled.div`
     padding-left: 0.3rem;
     font-size : 0.9rem;
     font-weight: 600;
+
 }
 `
 export const IsValid = styled.div`
@@ -124,5 +180,6 @@ export const IsValid = styled.div`
         padding: 0 1.5rem 0 1.5rem;
         font-size : 0.8rem;
         font-weight: 600;
+      
     }
 `
