@@ -35,6 +35,16 @@ export interface ResultInfo {
     post_content : string
     post_location : string
     isvalid : boolean
+    area_name : string
+    chatroom : string
+    endtime : string
+    member_min : number
+    member_num : number
+    userId : {
+        name : string
+        _id : string
+    }
+
 }
 
 function BoardPage() {

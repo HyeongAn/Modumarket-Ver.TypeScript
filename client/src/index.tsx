@@ -11,6 +11,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import ScrollTop from './components/ScrollTop';
 import { Authentification } from './reducers/loginSlice';
 import { UserInfo } from './reducers/userInfoSlice';
+import { boardInfo } from './reducers/boardSlice';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -19,6 +20,7 @@ const root = ReactDOM.createRoot(
 export interface RootState {
   login : Authentification;
   userInfo : UserInfo;
+  board : boardInfo;
 }
 
 export let persistor = persistStore(store);
