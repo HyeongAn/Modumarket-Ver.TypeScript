@@ -15,34 +15,56 @@ export const Wrap = styled.div`
 `
 
 export const MapWrap = styled.div`
-    width : 75%;
+    width : 85%;
     display : flex;
     align-items : center;
     padding-bottom: 1rem;
+    @media (min-width: 1024px){
+        width : 75%;
+    }
 `
 
 export const MapPhoto = styled.div`
     img{
-        width : 3rem;
-        height : 3rem;
+        width : 2rem;
+        height : 2rem;
+        @media (min-width : 767px){
+            width : 2.5rem;
+            height : 2.5rem; 
+        }
+        @media (min-width: 1024px){
+            width : 3rem;
+            height : 3rem;
+        }
     }
 `
 
 export const MapTitle = styled.div`
+    padding-left: 0.5rem;
     &  > span {
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
         font-family: 'Open Sans', sans-serif;
-        font-size : 2rem;
+        font-size : 1.5rem;
         font-weight : 700;
+        @media (min-width : 767px){
+            font-size : 1.8rem;
+        }
+        @media (min-width: 1024px){
+            font-size : 2rem;
+        }
     }
 `
 
 export const Map = styled.div`
     display: flex;
     justify-content : center;
-    width : 75%;
-    height: 25rem;
-    
-    
-
+    width : 85%;
+    height: 15rem;
+    @media (min-width : 767px){
+        height : 20rem;
+    }
+    @media (min-width: 1024px){
+        width : 75%;
+        height: 25rem;
+    }
 `
