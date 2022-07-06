@@ -31,7 +31,7 @@ import {
     DetailMemberAndTimeWrap,
     DetailMemberAndTime,
     DetailButtonWrap, DetailButton,
-    DitailButtonChild
+    DitailButtonChild,DetailDivider
 } from './styled';
 
 type InfoProps = {
@@ -110,24 +110,26 @@ function DetailSection({ info } : InfoProps) {
                             : <DetailPhoto><img src = {`${ REACT_APP_API_URL }/post/image/${info.data.image}/`} alt="Card Detail"/></DetailPhoto> 
                     }
                     <Detail>
-                        <DetailCategory>
-                            <img src={categoryImg} alt='category icon' />
-                            <span>{category[categoryNumber]}</span>
-                        </DetailCategory>
-                        <DetailMemberAndTimeWrap>
-                            <DetailMemberAndTime>
-                                <img src={MemberIcon} alt="Card Member Icon" />
-                                <span>참가인원</span>
-                            </DetailMemberAndTime>
-                            <span>{info.data.member_num} / {info.data.member_min}</span>
-                        </DetailMemberAndTimeWrap>
-                        <DetailMemberAndTimeWrap>
-                            <DetailMemberAndTime>
-                                <img src={TimerIcon} alt="Card Timer Icon" />
-                                <span>종료일</span>
-                            </DetailMemberAndTime>
-                            <span>{info.data.endtime}</span>
-                        </DetailMemberAndTimeWrap>
+                        <DetailDivider>
+                            <DetailCategory>
+                                <img src={categoryImg} alt='category icon' />
+                                <span>{category[categoryNumber]}</span>
+                            </DetailCategory>
+                            <DetailMemberAndTimeWrap>
+                                <DetailMemberAndTime>
+                                    <img src={MemberIcon} alt="Card Member Icon" />
+                                    <span>참가인원</span>
+                                </DetailMemberAndTime>
+                                <span>{info.data.member_num} / {info.data.member_min}</span>
+                            </DetailMemberAndTimeWrap>
+                            <DetailMemberAndTimeWrap>
+                                <DetailMemberAndTime>
+                                    <img src={TimerIcon} alt="Card Timer Icon" />
+                                    <span>종료일</span>
+                                </DetailMemberAndTime>
+                                <span>{info.data.endtime}</span>
+                            </DetailMemberAndTimeWrap>
+                        </DetailDivider>
                         <DetailButtonWrap>
                             <DetailButton>
                                 <DitailButtonChild background="#FF6767" onClick={() => dispatch(showChattingModal(true))} >채팅하기</DitailButtonChild>
