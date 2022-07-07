@@ -27,6 +27,7 @@ function Register() {
     const [address, setAddress] = useState("");
     const [endDate, setEndDate] = useState(new Date());
     const [files, setFiles] = useState("")
+    const formData = new FormData(); // 폼 태그로 이미지와 데이터를 한번에 보낼 수 있도록 하기 위한 접근
     const [boardInfo, setBoardInfo] = useState({
         title: "",
         userId: userId,
@@ -48,8 +49,7 @@ function Register() {
 
     async function handleRegister() { // 입력한 값을 서버로 보내는 함수 
 
-        let photoFile = document.getElementById("photofile");
-        const formData = new FormData(); // 폼 태그로 이미지와 데이터를 한번에 보낼 수 있도록 하기 위한 접근
+        //let photoFile = document.getElementById("photofile");
         const { title, userId, category, post_content, area_name, isvalid, member_num, member_min } = boardInfo
         formData.append("title", title);
         formData.append("category", JSON.stringify(category));
@@ -88,7 +88,6 @@ function Register() {
     // 사진 미리보기 파일 읽어오기
     function onLoadFile(file : any) {
         const reader = new FileReader();
-        const formData = new FormData();
         reader.readAsDataURL(file)
         reader.onload = (file : any) => {
             setFiles(file.target.result)
