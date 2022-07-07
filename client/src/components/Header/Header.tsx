@@ -14,7 +14,7 @@ import {
     changeModalImg, 
 } from '../../reducers/modalSlice';
 import {
-    NavLink,
+    NavLink,ButtonWrap,
     NavContainer,
     NavButtons,
     NavButton,
@@ -134,45 +134,46 @@ function Header() {
             </NavLink>
             {isLogin ? (
                 <>
-                    <NavButtons>
+                    <NavButtons> 
+                        <ButtonWrap>
+                            {userSocial === 'own' ?
+                                //일반 로그아웃
+                                <NavButton onClick={async () => {
+                                    await handleLogout()
+                                    await setTimeout(() => purge(), 200)
+                                }}>Logout</NavButton>
+                                :
+                                userSocial === 'kakao' ?
+                                    //카카오 로그아웃
+                                    <NavButton onClick={() => {
+                                        handleKakaoLogout().then(() => {
+                                            dispatch(inputModalText('로그아웃이 완료되었습니다.'));
+                                            dispatch(changeModalImg('check_man'));
+                                            dispatch(showConfirmModal(true));
+                                            dispatch(logout());
+                                        })
+                                    }
+                                    }
+                                    >Logout</NavButton>
+                                    :
+                                    // github 로그아웃
+                                    <NavButton onClick={() => {
+                                        dispatch(logout());
+                                        handleGithubLogout()
+                                        dispatch(inputModalText('로그아웃이 완료되었습니다.'));
+                                        dispatch(changeModalImg('check_man'));
+                                        dispatch(showConfirmModal(true));
+
+                                    }}>Logout</NavButton>
+                            }
+                        </ButtonWrap>
                         <NavLink to="/mypage" >
                             <NavButton onClick={async () => {
                                 handleGetUserInfo();
                                 handleWritePost();
                                 handleParticipatePost();
-                            }}>마이페이지</NavButton>
+                            }}>Mypage</NavButton>
                         </NavLink>
-                        {userSocial === 'own' ?
-                            //일반 로그아웃
-                            <NavButton onClick={async () => {
-                                await handleLogout()
-                                await setTimeout(() => purge(), 200)
-                            }}>Logout</NavButton>
-                            :
-                            userSocial === 'kakao' ?
-                                //카카오 로그아웃
-                                <NavButton onClick={() => {
-                                    handleKakaoLogout().then(() => {
-                                        dispatch(inputModalText('로그아웃이 완료되었습니다.'));
-                                        dispatch(changeModalImg('check_man'));
-                                        dispatch(showConfirmModal(true));
-                                        dispatch(logout());
-                                    })
-
-                                }
-                                }
-                                >Logout</NavButton>
-                                :
-                                // github 로그아웃
-                                <NavButton onClick={() => {
-                                    dispatch(logout());
-                                    handleGithubLogout()
-                                    dispatch(inputModalText('로그아웃이 완료되었습니다.'));
-                                    dispatch(changeModalImg('check_man'));
-                                    dispatch(showConfirmModal(true));
-
-                                }}>Logout</NavButton>
-                        }
                     </NavButtons>
                 </>
             ) : (

@@ -16,8 +16,8 @@ export const ModalContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 32.5rem;
-    height: 50rem;
+    width: 24rem;
+    height: 85%;
     padding-bottom: 1rem;
     background: #fff;
     overflow: scroll;
@@ -29,6 +29,19 @@ export const ModalContainer = styled.div`
     z-index: 900;
     ::-webkit-scrollbar {
         display: none;
+    }
+    @media (min-width : 480px){
+        width: 25rem;
+        height: 90%;
+    }
+    @media (min-width : 767px){
+        width: 28rem;
+        height: 90%;
+    }
+    @media (min-width: 1024px){
+        width: 32.5rem;
+        height: 93%;
+    
     }
 `
 
@@ -77,7 +90,6 @@ export const TitleWrap = styled.div`
         padding-left : 0.5rem;
         border: 1px solid #DFDFDF;
         border-radius: 4px;
-        margin-bottom : 0.5rem;
         
     }
 `
@@ -132,11 +144,13 @@ export const PhotoSearch = styled.div`
 
 export const Photo = styled.div`
     width : 100%;
-    height: 100%;
-
+    height : 100%;
+    min-height: 7rem;
+    
     img{
         border-radius: 4px;
         width : 100%;
+        min-height: 7rem;
         height: 100%;
     }
 
@@ -151,11 +165,20 @@ export const CategoryMemberWrap = styled.div`
 `
 
 export const Category = styled.select`
-    width: 11rem;
+    width: 6.5rem;
     height: 1.9rem;
     border : 1px solid #DFDFDF;
     border-radius : 4px;
     outline:none;
+    @media (min-width : 480px){
+        width : 7rem;
+    }
+    @media (min-width : 767px){
+        width : 9.3rem;
+    }
+    @media (min-width: 1024px){
+        width: 11rem;
+    }
 `
 
 export const AtLeastMember = styled.div`
@@ -179,7 +202,7 @@ export const AtLeastMember = styled.div`
 
 export const ContentWrap = styled.div`
     width : 75%;
-    padding-top: 0.5rem;
+    padding-top: 1rem;
     font-size : 1rem;
     font-weight : 700;
     & > p {

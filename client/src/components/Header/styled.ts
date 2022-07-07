@@ -8,10 +8,8 @@ export const NavLink = styled(Link)`
     display : flex;
     align-items: center;
     flex-direction: row;
-    width : 11.875rem;
     font-size: 1.6rem;
 
-    
     & > span{
         text-decoration: none;
         color: black;
@@ -75,12 +73,25 @@ export const NavBoard = styled.div`
     font-size: 0.7rem;
     font-weight: bold;
     font-size : 0.8rem;
+    @media (min-width : 480px){
+        
+    }
+    
+    @media (min-width:767px){
+        
+        
+    }
+    @media (min-width: 1024px){
+        width : 11.875rem;
+        
+    }
     & > span {
         padding: 0.7rem;
+        width : 4rem;
     }
     @media (min-width : 480px){
         font-size: 0.9rem;
-        width : 11.875rem;
+        width : 5rem;
     }
     
     @media (min-width:767px){
@@ -95,12 +106,15 @@ export const NavBoard = styled.div`
 `
 export const NavButtons = styled.div`
     display: flex;
-    width : 11.875rem;
     flex-direction: row-reverse;
     align-items: center;
-   
-
 `;
+
+export const ButtonWrap = styled.div`
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+`
 
 export const NavButton = styled.button`
     
@@ -112,8 +126,9 @@ export const NavButton = styled.button`
     line-height: 1.4;
     color: #858585;
     background: #fff;
-    border-radius: 4px;
-    border: 1px solid #ADADAD;
+    //border-radius: 4px;
+    border: none;
+    //1px solid #ADADAD;
     transition: all 0.3s;
     height: 1.5rem;
     width: 2.5rem;
