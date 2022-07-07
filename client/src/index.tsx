@@ -12,6 +12,7 @@ import ScrollTop from './components/ScrollTop';
 import { Authentification } from './reducers/loginSlice';
 import { UserInfo } from './reducers/userInfoSlice';
 import { boardInfo } from './reducers/boardSlice';
+import { modalInfo } from './reducers/modalSlice';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -21,6 +22,7 @@ export interface RootState {
   login : Authentification;
   userInfo : UserInfo;
   board : boardInfo;
+  modal : modalInfo;
 }
 
 export let persistor = persistStore(store);
