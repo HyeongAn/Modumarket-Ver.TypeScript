@@ -86,16 +86,15 @@ function Register() {
     }
 
     // 사진 미리보기 파일 읽어오기
-    function onLoadFile(e : any) {
+    function onLoadFile(file : any) {
         const reader = new FileReader();
         const formData = new FormData();
-        reader.readAsDataURL(e)
-        reader.onload = (e : any) => {
-            setFiles(e.target.result)
+        reader.readAsDataURL(file)
+        reader.onload = (file : any) => {
+            setFiles(file.target.result)
         }
-        
-        if(e.target.files[0]){
-            formData.append("image", e.target.files[0])
+        if(file){
+            formData.append("image", file)
         }
     }
 

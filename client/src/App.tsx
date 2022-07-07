@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Body from './components/Body/Body'
+import ModalController from './components/Modals/ModalController';
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset'
 import './App.css';
@@ -64,6 +65,7 @@ function App() {
       <Header/>
       <Body/>
       <Footer/>
+      <ModalController/>
     </>
 
   );
