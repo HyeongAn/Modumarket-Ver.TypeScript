@@ -1,6 +1,38 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const actionName = 'modal';
+
+export interface modalInfo  {
+    loginModal: false,
+    signupGateModal: false,
+    signupModal: false,
+    signupSocialModal: false,
+    signoutModal: false,
+    signoutSocialModal: false,
+    findPWModal: false,
+    deleteModal:false,
+    registerModal: false,
+    reviseRegisterModal:false,
+    locationModal: false,
+    chattingModal: false,
+    notificationModal: false,
+    confirmModal: false,
+    confirmReloadModal: false,
+    confirmModalToBoard: false,
+    myInfoModal: false,
+    myPwCheckModal: false,
+    myNewPwModal: false,
+    loginConfirmModal : false,
+    recruitmentCompleteModal : false,
+    participateModal:false,
+    cancelParticipateModal : false,
+    alertModal : false,
+    modalInformText: "",
+    modalImg: "",
+    socialInfoId: '',
+    socialInfoEmail: '',
+};
+
 export const initialState = {
     loginModal: false,
     signupGateModal: false,
