@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import Login from './LoginModal/LoginModal';
-// import SignupGate from './SignupGate/SignupGate';
+import SignupGate from './SignupGate/SignupGate';
 import SignupModal from './SignupModal/SignupModal';
 // import SignupSocialModal from './SignupSocialModal/SignupSocialModal'
 // import Confirm from './Confirm/Confirm';
@@ -50,7 +50,7 @@ const ModalController = () => {
     return (
         <>
             {loginModal && <Login />}
-            {/*{signupGateModal && <SignupGate />*/}
+            {signupGateModal && <SignupGate />}
             {signupModal && <SignupModal />}
             {/*signupSocialModal && <SignupSocialModal />} */}
             {registerModal && <Register />}
