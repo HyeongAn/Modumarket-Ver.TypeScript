@@ -14,19 +14,36 @@ export const ModalBackground = styled.div`
 `;
 
 export const ModalContainer = styled.div`
-  width: 30rem;
-  height: 40rem;
-  background: #fff;
-  border-radius: 10px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 500;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+    min-width: 23rem;
+    min-height: 72%;
+    background: #fff;
+    border-radius: 10px;
+    position: fixed;
+    overflow: scroll;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500;
+    max-height: 40rem;
+    max-width: 30rem;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @media (min-width : 480px){
+      width: 23rem;
+      height: 90%;
+        
+    }
 
+    @media (min-width:767px){
+      width: 23rem;
+      height: 95%;
+        
+    }
+    @media (min-width: 1024px){
+      width: 30rem;
+      height: 40rem;
+    }
 `;
 
 
