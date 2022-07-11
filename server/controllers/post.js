@@ -222,7 +222,7 @@ module.exports = {
   registerPost: async (req, res) => {
     // if (req.headers.authorization) {
     // }
-    // console.log(req.file)
+    console.log(req.file)
     const token = req.headers.authorization.split(' ')[1];
     const accTokenData = jwt.verify(token, process.env.ACCESS_SECRET);
     const refTokenData = jwt.verify(req.cookies.refreshToken, process.env.REFRESH_SECRET);
@@ -237,14 +237,14 @@ module.exports = {
         await unlinkFile(req.file.path)
         newPost.image = req.file.filename;
       }
-      newPost.userId = req.body.userId;
-      newPost.category = req.body.category;
-      newPost.area_name = req.body.area_name;
-      newPost.title = req.body.title;
-      newPost.member_min = req.body.member_min;
-      newPost.post_content = req.body.post_content;
-      newPost.post_location = req.body.post_location;
-      newPost.isvalid = req.body.isvalid;
+      newPost.userId = JSON.parse(req.body.userId);
+      newPost.category = JSON.parse(req.body.category);
+      newPost.area_name = JSON.parse(req.body.area_name);
+      newPost.title = JSON.parse(req.body.title);
+      newPost.member_min = JSON.parse(req.body.member_min);
+      newPost.post_content = JSON.parse(req.body.post_content);
+      newPost.post_location = JSON.parse(req.body.post_location);
+      newPost.isvalid = JSON.parse(req.body.isvalid);
       newPost.endtime = req.body.endtime;
 
       newPost.save()
@@ -263,15 +263,14 @@ module.exports = {
       const accessToken = jwt.sign(JSON.parse(JSON.stringify({ _id, email, area_name })), process.env.ACCESS_SECRET, { expiresIn: '2h' });
 
       const newPost = new Post();
-      newPost.userId = req.body.userId;
-      newPost.category = req.body.category;
-      newPost.area_name = req.body.area_name;
-      newPost.title = req.body.title;
-      newPost.member_min = req.body.member_min;
-      newPost.post_content = req.body.post_content;
-      newPost.image = req.file.filename;
-      newPost.post_location = req.body.post_location;
-      newPost.isvalid = req.body.isvalid;
+      newPost.userId = JSON.parse(req.body.userId);
+      newPost.category = JSON.parse(req.body.category);
+      newPost.area_name = JSON.parse(req.body.area_name);
+      newPost.title = JSON.parse(req.body.title);
+      newPost.member_min = JSON.parse(req.body.member_min);
+      newPost.post_content = JSON.parse(req.body.post_content);
+      newPost.post_location = JSON.parse(req.body.post_location);
+      newPost.isvalid = JSON.parse(req.body.isvalid);
       newPost.endtime = req.body.endtime;
 
       newPost.save()
@@ -290,15 +289,14 @@ module.exports = {
       const refreshToken = jwt.sign(JSON.parse(JSON.stringify({ _id, email, area_name })), process.env.REFRESH_SECRET, { expiresIn: '14d' });
 
       const newPost = new Post();
-      newPost.userId = req.body.userId;
-      newPost.category = req.body.category;
-      newPost.area_name = req.body.area_name;
-      newPost.title = req.body.title;
-      newPost.member_min = req.body.member_min;
-      newPost.post_content = req.body.post_content;
-      newPost.image = req.file.filename;
-      newPost.post_location = req.body.post_location;
-      newPost.isvalid = req.body.isvalid;
+      newPost.userId = JSON.parse(req.body.userId);
+      newPost.category = JSON.parse(req.body.category);
+      newPost.area_name = JSON.parse(req.body.area_name);
+      newPost.title = JSON.parse(req.body.title);
+      newPost.member_min = JSON.parse(req.body.member_min);
+      newPost.post_content = JSON.parse(req.body.post_content);
+      newPost.post_location = JSON.parse(req.body.post_location);
+      newPost.isvalid = JSON.parse(req.body.isvalid);
       newPost.endtime = req.body.endtime;
 
       newPost.save()
