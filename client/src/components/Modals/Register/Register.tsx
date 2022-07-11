@@ -68,10 +68,6 @@ function Register() {
             formData.append("member_min", JSON.stringify(member_min));
             formData.append("endtime", moment(endDate).format('YYYY-MM-DD'));
             formData.append("image",images);
-            
-            for (var pair of formData.entries()) {
-                console.log(pair[0]+ ', ' + pair[1]); 
-            }
 
             await axios({
                 url: `${REACT_APP_API_URL}/post`,

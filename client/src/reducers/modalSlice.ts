@@ -27,10 +27,10 @@ export interface modalInfo  {
     participateModal:false,
     cancelParticipateModal : false,
     alertModal : false,
-    modalInformText: "",
-    modalImg: "",
-    socialInfoId: '',
-    socialInfoEmail: '',
+    modalInformText: string,
+    modalImg: string,
+    socialInfoId: string,
+    socialInfoEmail: string,
 };
 
 export const initialState = {

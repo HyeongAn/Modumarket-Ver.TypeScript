@@ -44,7 +44,7 @@ function SignupModal() {
 
     /* 비밀번호 확인 */
     const handlePWcheck = (e : any) => {
-        console.log(userInputInfo.password)
+        //console.log(userInputInfo.password)
         setPwCheck(e.target.value)
         if (e.target.value !== userInputInfo.password) {
             setErrorPwMessage('비밀번호가 일치하지 않습니다');
@@ -57,12 +57,13 @@ function SignupModal() {
     const alterAddress = (position : any) => {
         let x = position.coords.longitude;
         let y = position.coords.latitude;
+        console.log(x,y)
         if (x && y) {
             axios.get(
                 `https://dapi.kakao.com/v2/local/geo/coord2regioncode.json?x=${x}&y=${y}`,
                 {
                     headers: {
-                        Authorization: `KakaoAK ${process.env.REACT_APP_KAKAO_API_KEY}`,
+                        "Authorization": `KakaoAK ${process.env.REACT_APP_KAKAO_API_KEY}`,
                         "Content-Type": "application/json"
                     }
                 }
@@ -77,9 +78,9 @@ function SignupModal() {
     }
     /* 위치인증 확인 요청 */
     const getUserLocation = () => {
-        dispatch(inputModalText('로 딩 중'));
-        dispatch(changeModalImg('loading'));
-        dispatch(showConfirmModal(true));
+        dispatch(inputModalText('로 딩 중')); // confirmModal의 text 내용을 바꿈
+        dispatch(changeModalImg('loading')); // confirmModal의 img를 바꿈
+        dispatch(showConfirmModal(true)); // confirmModal을 띄움
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition((position) => {
                 alterAddress(position);

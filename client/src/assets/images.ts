@@ -1,5 +1,8 @@
+type confirmImg = {
+    [key : string]: string
+}
 
-export const confirmImg = {
+export const confirmImg : confirmImg= {
     check_man: "/images/check_man.png",
     check_circle: "/images/check_circle_icon.png",
     check_woman1: "/images/check_woman_with_phone.png",
