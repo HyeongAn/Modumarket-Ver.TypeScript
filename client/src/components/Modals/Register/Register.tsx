@@ -18,7 +18,6 @@ import {
 } from './styled'
 
 
-
 function Register() {
     const dispatch = useDispatch();
     const accessToken = useSelector((state : RootState) => state.login.accessToken);
@@ -26,6 +25,7 @@ function Register() {
     const area_name = useSelector((state: RootState) => state.userInfo.userInfo.area_name);
     const [address, setAddress] = useState("");
     const [endDate, setEndDate] = useState(new Date());
+    const [images, setImages] = useState("")
     const [files, setFiles] = useState("")
     const formData = new FormData(); // 폼 태그로 이미지와 데이터를 한번에 보낼 수 있도록 하기 위한 접근
     const [boardInfo, setBoardInfo] = useState({
@@ -50,23 +50,29 @@ function Register() {
     async function handleRegister() { // 입력한 값을 서버로 보내는 함수 
 
         //let photoFile = document.getElementById("photofile");
-        const { title, userId, category, post_content, area_name, isvalid, member_num, member_min } = boardInfo
-        formData.append("title", title);
-        formData.append("category", JSON.stringify(category));
-        formData.append("post_content", post_content);
-        formData.append("area_name", JSON.stringify(area_name));
-        formData.append("userId", JSON.stringify(userId));
-        formData.append("post_location", address);
-        formData.append("isvalid", JSON.stringify(isvalid));
-        formData.append("member_num", JSON.stringify(member_num));
-        formData.append("member_min", JSON.stringify(member_min));
-        formData.append("endtime", moment(endDate).format('YYYY-MM-DD'));
+        const { title, userId, category, image, post_content, area_name, isvalid, member_num, member_min } = boardInfo
         
         if (title === "" || address === "" || post_content === "" || member_min === 0) {
 
             dispatch(showAlertModal(true));
 
         } else {
+            formData.append("title", title);
+            formData.append("category", JSON.stringify(category));
+            formData.append("post_content", post_content);
+            formData.append("area_name", JSON.stringify(area_name)); 
+            formData.append("userId", JSON.stringify(userId)); 
+            formData.append("post_location", JSON.stringify(address));
+            formData.append("isvalid", JSON.stringify(isvalid));
+            formData.append("member_num", JSON.stringify(member_num));
+            formData.append("member_min", JSON.stringify(member_min));
+            formData.append("endtime", moment(endDate).format('YYYY-MM-DD'));
+            formData.append("image",images);
+            
+            for (var pair of formData.entries()) {
+                console.log(pair[0]+ ', ' + pair[1]); 
+            }
+
             await axios({
                 url: `${REACT_APP_API_URL}/post`,
                 method: 'POST',
@@ -88,12 +94,10 @@ function Register() {
     // 사진 미리보기 파일 읽어오기
     function onLoadFile(file : any) {
         const reader = new FileReader();
+        setImages(file)
         reader.readAsDataURL(file)
         reader.onload = (file : any) => {
             setFiles(file.target.result)
-        }
-        if(file){
-            formData.append("image", file)
         }
     }
 
@@ -109,7 +113,6 @@ function Register() {
         }).open();
 
     }
-
 
 
     return (
