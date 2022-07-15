@@ -15,7 +15,7 @@ export const ModalBackground = styled.div`
 
 export const ModalContainer = styled.div`
     min-width: 23rem;
-    min-height: 72%;
+    min-height: 40rem;
     background: #fff;
     border-radius: 10px;
     position: fixed;
@@ -24,21 +24,17 @@ export const ModalContainer = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 500;
-    max-height: 40rem;
-    max-width: 30rem;
     &::-webkit-scrollbar {
       display: none;
     }
     @media (min-width : 480px){
       width: 23rem;
-      height: 90%;
-        
+  
     }
 
     @media (min-width:767px){
       width: 23rem;
-      height: 95%;
-        
+      
     }
     @media (min-width: 1024px){
       width: 30rem;

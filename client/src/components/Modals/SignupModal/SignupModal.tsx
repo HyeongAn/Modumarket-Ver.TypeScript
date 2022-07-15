@@ -57,7 +57,6 @@ function SignupModal() {
     const alterAddress = (position : any) => {
         let x = position.coords.longitude;
         let y = position.coords.latitude;
-        console.log(x,y)
         if (x && y) {
             axios.get(
                 `https://dapi.kakao.com/v2/local/geo/coord2regioncode.json?x=${x}&y=${y}`,
