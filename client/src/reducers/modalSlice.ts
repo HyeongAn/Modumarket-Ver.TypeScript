@@ -28,7 +28,7 @@ export interface modalInfo  {
     cancelParticipateModal : false,
     alertModal : false,
     modalInformText: string,
-    modalImg: string,
+    modalImg?: string,
     socialInfoId: string,
     socialInfoEmail: string,
 };

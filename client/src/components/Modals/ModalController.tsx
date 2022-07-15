@@ -3,8 +3,8 @@ import Login from './LoginModal/LoginModal';
 import SignupGate from './SignupGate/SignupGate';
 import SignupModal from './SignupModal/SignupModal';
 // import SignupSocialModal from './SignupSocialModal/SignupSocialModal'
-// import Confirm from './Confirm/Confirm';
-// import ConfirmModalToBoard from './ConfirmModalToBoard/ConfirmModalToBoard';
+import Confirm from './Confirm/Confirm';
+import ConfirmModalToBoard from './ConfirmModalToBoard/ConfirmModalToBoard';
 import Register from './Register/Register';
 // import Chatting from './Chatting/Chatting'
 // import MyInfo from './MyPageModal/MyInfo';
@@ -14,11 +14,11 @@ import Register from './Register/Register';
 import ReviseRegister from './ReviseRegister/ReviseRegister'
 import DeleteModal from './DeleteModal/DeleteModal'
 import LoginConfirmModal from './LoginConfirmModal/LoginConfirmModal'
-// import RecruitmentCompleteModal from './RecruitmentCompleteModal/RecruitmentCompleteModal'
-// import ParticipateModal from './ParticipateModal/participateModal'
-// import CancelParticipateModal from './CancelParticipateModal/CancelParticipateModal'
-// import AlertModal from './AlertModal/AlertModal'
-// import ConfirmReloadModal from './ConfirmReload/ConfirmReload';
+import RecruitmentCompleteModal from './RecruitmentCompleteModal/RecruitmentCompleteModal'
+import ParticipateModal from './ParticipateModal/ParticipateModal'
+import CancelParticipateModal from './CancleParticipateModal/CancleParticipateModal'
+import AlertModal from './AlertModal/AlertModal'
+import ConfirmReloadModal from './ConfirmReload/ConfirmReload';
 import {RootState} from '../../index'
 
 const ModalController = () => {
@@ -63,13 +63,13 @@ const ModalController = () => {
             {reviseRegisterModal && <ReviseRegister />}
             {deleteModal && <DeleteModal />}
             {loginConfirmModal && <LoginConfirmModal />}
-            {/* {recruitmentCompleteModal && <RecruitmentCompleteModal />}
+            {recruitmentCompleteModal && <RecruitmentCompleteModal />}
             {participateModal && <ParticipateModal />}
             {cancelParticipateModal && <CancelParticipateModal />}
             {confirmModalToBoard && <ConfirmModalToBoard />}
             {alertModal && <AlertModal />}
             {confirmModal && <Confirm />}
-            {confirmReloadModal && <ConfirmReloadModal />} */}
+            {confirmReloadModal && <ConfirmReloadModal />} 
         </>
     )
 }
