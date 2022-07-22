@@ -13,7 +13,7 @@ import { Authentification } from './reducers/loginSlice';
 import { UserInfo } from './reducers/userInfoSlice';
 import { boardInfo } from './reducers/boardSlice';
 import { modalInfo } from './reducers/modalSlice';
-
+import {myPostInfo} from './reducers/myPostSlice'
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -23,6 +23,7 @@ export interface RootState {
   userInfo : UserInfo;
   board : boardInfo;
   modal : modalInfo;
+  mypost : myPostInfo
 }
 
 export let persistor = persistStore(store);
