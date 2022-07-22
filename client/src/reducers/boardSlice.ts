@@ -23,6 +23,7 @@ export interface boardInfo {
     isApplied: boolean
 }
 
+// 리듀서가 최초로 호출되었을 때 사용될 상태값.
 export const initialState = {
     cardInfo: {
         _id :"",

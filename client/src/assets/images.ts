@@ -5,6 +5,8 @@ import checkWoman2 from  "./check_woman.png"
 import checkSkull from  "./skull_icon.png"
 import question from  "./question.png"
 import loading from  "./loading.png"
+import noneprofile from './profile_color_blue.png'
+import nodata from './no_data_not_yet.gif'
 
 
 type confirmImg = {
@@ -22,7 +24,7 @@ export const confirmImg : confirmImg = {
     loading: loading,
 }
 
-export const profileImg = "/images/profile_color_blue.png"
+export const profileImg = noneprofile
 
 
-export const nothingImg = '/images/no_connection.gif'
+export const nothingImg = nodata

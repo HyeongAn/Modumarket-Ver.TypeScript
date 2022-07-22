@@ -36,7 +36,7 @@ export interface ResultInfo {
     post_location : string
     isvalid : boolean
     area_name : string
-    chatroom : string
+    chatroom? : any
     endtime : string
     member_min : number
     member_num : number

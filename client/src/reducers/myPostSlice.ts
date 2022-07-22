@@ -3,6 +3,46 @@ import { PURGE } from 'redux-persist'
 
 const actionName = 'user';
 
+export interface myPostInfo{
+    writePost: [{
+        "_id": string,
+        title: string,
+        userId: {
+            name: string,
+            _id: string
+        },
+        category: 0,
+        image: string,
+        post_content: string,
+        area_name: string,
+        post_location: string,
+        isvalid: true,
+        member_num: 1,
+        member_min: 0,
+        endtime: string,
+    }],
+    participatePost: [{
+        "_id": string,
+        title: string,
+        userId: {
+            name: string,
+            _id: string
+        },
+        category: 0,
+        image: string,
+        post_content: string,
+        area_name: string,
+        post_location: string,
+        isvalid: true,
+        member_num: 1,
+        member_min: 0,
+        endtime: string,
+    }],
+    isWriteNull: true,
+    isPartyNull: true,
+}
+
+
 export const initialState = {
     writePost: [{
         "_id": "",
