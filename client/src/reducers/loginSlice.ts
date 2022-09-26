@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { PURGE } from "redux-persist"
+
 export interface Authentification {
     isLogin: boolean;
     accessToken: string;
